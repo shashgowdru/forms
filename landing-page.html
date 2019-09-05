@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name=viewport content="width=device-width, initial-scale=1.0">
+		<title>tag</title> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/site.css">
+		<script>
+			// function validateForm() {
+			//   var illegalChars = /\W/;
+			//   var x = document.forms["myForm"]["fname"].value;
+			//   // var errors = ""
+			//   if (x.length<8) {
+			//     alert("kekjhjjk")
+			//     return false;
+			//   }
+			//   else if((illegalChars.test(x))){
+			// 		alert("dsdsdsd")
+			// 	    return false;
+			//   	}
+			// }
+
+			// function validateForm() {
+			//   var y = document.forms["myForm"]["phone"].value;
+			//   var errors = ""
+			//   if (typeof y=='number') {
+			//     errors= "not a number";
+			//     showerr(errors)
+			//     return false;
+			//   }
+			// }
+			
+			 function validateForm() {
+			  var lowerCaseLetters = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/g;	
+
+			  var x = document.forms["myForm"]["psw"].value;
+			   debugger;	
+			   var a = lowerCaseLetters.test(x);
+			   debugger;	
+
+			    if(!(lowerCaseLetters.test(x))){
+			    		  debugger;	
+					alert("password is correct")
+				    return false;
+			  	}
+			}
+
+			// function showerr(errors){
+			// 	document.getElementById('err').innerHTML=errors;
+			// }
+
+		</script>
+	</head>
+	<body>
+		<header>
+			<a href="#"></a>
+		</header>
+		<div class="content">
+			<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+				<!-- <div class="name">
+					<input type="text" placeholder="Name" name="fname">
+				</div>
+				<div class="phone">
+					<input type="tel" placeholder="Phone numbers" name="phone">
+				</div>
+				<div class="email">
+					<input type="email" placeholder="Email">
+				</div>
+ -->
+			<!-- 	<div class="desc">
+					<textarea cols="30" rows="10" placeholder="Description"></textarea>
+				</div> -->	
+				<div class="password">				
+					<input type="password" id="psw" name="psw" title="Must contain at least one numbersbersr and one uppercase and lowercase letter, and at least 8 or more characters" required>
+				</div>
+				<br/>
+				<!-- <input type="checkbox" value="Bike"> -->
+				<button type="submit">Submit</button>
+				 <p id="err"></p>
+			</form>
+		</div>
+		<div id="textslide"></div>
+		<footer>
+			
+		</footer>
+		<!-- <script src="../scripts/script.js"></script> -->
+		
+	</body>
+
+</html>
